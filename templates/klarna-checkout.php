@@ -37,3 +37,5 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 </form>
 
 <?php do_action( 'kco_wc_after_checkout_form' ); ?>
+
+<?php do_action( 'woocommerce_after_checkout_form', $checkout ); // allow other plugins to use the regular woocommerce hook ?>
